@@ -46,7 +46,7 @@ html_template = """
 """
 
 def generate_verification_link(verification_token):
-    base_url = f"http://{mailgun_domain}:5000/v1/user/verify"
+    base_url = f"https://{mailgun_domain}/v1/user/verify"
     params = {"verify_token": verification_token}
     link = base_url + "?" + urllib.parse.urlencode(params)
     return link
